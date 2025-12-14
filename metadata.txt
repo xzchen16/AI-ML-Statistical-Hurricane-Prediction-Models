@@ -1,0 +1,59 @@
+Metadata: Hurricane Prediction Dataset
+
+Overview
+This metadata describes the dataset used across the hurricane prediction models (ANN, KNN, Lasso, XGBoost). It provides variable definitions, units, and contextual details necessary to interpret the inputs (predictors) and the target (labels).
+
+Files
+- Data/independentvariable.Rdata: Predictor feature sets 1-9. (See definition of 1-9 in the manuscript)
+- Data/targetvarible.Rdata: Target variable sets 1-9 (See definition of 1-9 in the manuscript).
+
+General Structure
+- Predictors: Rows typically represent observations (time steps, events, or spatial grid cells), and columns represent features. Confirm the exact orientation in your scripts.
+- Target: A vector aligned with predictor rows. Ensure row order and indexing are consistent.
+
+Variable Definitions
+independentvariable:
+Each of the set is a n x k dataframe, n represents the study years in our research (n=74), and k represents the number of independentvariables in this set.
+All of the variables were standardized.
+Core Climate Indices
+•	amm01 – amm04: Atlantic Meridional Mode (Jan – Apr)
+•	amo01 – amo04: Atlantic Multidecadal Oscillation (Jan – Apr)
+•	ao01 – ao04: Arctic Oscillation (Jan – Apr)
+•	censo01 – censo04: Bivariate ENSO (El Niño–Southern Oscillation) Time Series (Jan – Apr)
+•	dm01 – dm04: Atlantic Dipole Mode (DM = TNA − TSA) (Jan – Apr)
+•	epo01 – epo04: East Pacific / North Pacific Oscillation Index (Jan – Apr)
+•	ggst01 – ggst04: Global Mean Land/Ocean Temperature Index (Jan – Apr)
+•	ngst01 – ngst04: North Hemisphere Mean Land/Ocean Temperature Index (Jan – Apr)
+•	sgst01 – sgst04: South Hemisphere Mean Land/Ocean Temperature Index (Jan – Apr)
+•	nao01 – nao04: North Atlantic Oscillation (Jan – Apr)
+•	pdo01 – pdo04: Pacific Decadal Oscillation (Jan – Apr)
+•	pna01 – pna04: Pacific North American Index (Jan – Apr)
+•	qbo01 – qbo04: Quasi-Biennial Oscillation (Jan – Apr)
+•	sfi01 – sfi04: Solar Flux (10.7 cm) (Jan – Apr)
+•	soi01 – soi04: Southern Oscillation Index (Jan – Apr)
+•	tna01 – tna04: Tropical Northern Atlantic Index (Jan – Apr)
+•	tsa01 – tsa04: Tropical Southern Atlantic Index (Jan – Apr)
+•	whwp01 – whwp04: Western Hemisphere Warm Pool Index (Jan – Apr)
+•	wp01 – wp04: Western Pacific Index (Jan – Apr)
+•	tni01 – tni04: Trans-Niño Index (Jan – Apr)
+•	mdrsst01 – mdrsst04: Sea Surface Temperature Averaged over MDR (Jan – Apr)
+•	mdrolr01 – mdrolr04: Top-of-Atmosphere Outgoing Longwave Radiation Averaged over MDR (Jan – Apr)
+•	mdrslp01 – mdrslp04: Sea Level Pressure Averaged over MDR (Jan – Apr)
+•	mdru20001 – mdru20004: Zonal Wind at 200 hPa Averaged over MDR (Jan – Apr)
+•	mdrv20001 – mdrv20004: Meridional Wind at 200 hPa Averaged over MDR (Jan – Apr)
+•	mdru85001 – mdru85004: Zonal Wind at 850 hPa Averaged over MDR (Jan – Apr)
+•	mdrv85001 – mdrv85004: Meridional Wind at 850 hPa Averaged over MDR (Jan – Apr)
+•	mdrvws01 – mdrvws04: Vertical Wind Shear Averaged over MDR (Jan – Apr)
+________________________________________
+Niño Indices
+•	nino120X: Niño-1+2 SST (Extreme Eastern Tropical Pacific, 0–10°S, 90–80°W) 
+•	nino30X: Niño-3 SST (Eastern Tropical Pacific, 5°N–5°S, 150–90°W) 
+•	nino340X: Niño-3.4 SST (East-Central Tropical Pacific, 5°N–5°S, 170–120°W) 
+•	nino40X: Niño-4 SST (Central Tropical Pacific, 5°N–5°S, 160°E–150°W) 
+•	mei01 – mei04: Multivariate ENSO Index (Jan – Apr)
+________________________________________
+LHF index
+•	lhf.win1 – lhf.win5: Latent Heat Flux (LHF) EOF Scores for Winter (Modes 1 – 5)
+
+targetvariable:
+each set is a 74x1 matrix, each row has one number for the grouth truth count of the target varaibles in set 1-9
